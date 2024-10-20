@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fashion E-Commerce</title>
+</head>
+<body>
+    <header>
+        <h1>Fashion Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Cart (0)</a></li>
+                <li><a href="#" onclick="openModal('loginModal')">Login</a></li>
+                <li><a href="#" onclick="openModal('signupModal')">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="categories">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="#">Stylish Outfit</a></li>
+                <li><a href="#">Shirts</a></li>
+                <li><a href="#">Shoes</a></li>
+                <li><a href="#">Accessories</a></li>
+            </ul>
+        </section>
+
+        <section class="products">
+            <article class="product">
+                <a href="https://ibb.co/x5LrrmY">
+                    <img src="https://i.ibb.co/GPprrs9/dsc08347-orig.jpg" alt="Stylish outfit">
+                </a>
+                <h2>Stylish Outfit</h2>
+                <p>$49.99</p>
+                <button>Add to Cart</button>
+            </article>
+            <article class="product">
+                <a href="https://ibb.co/K6tFdTZ">
+                    <img src="https://i.ibb.co/v1NZp05/dsc07769-orig.jpg" alt="Stylish outfit">
+                </a>
+                <h2>Stylish Outfit</h2>
+                <p>$49.99</p>
+                <button>Add to Cart</button>
+            </article>
+            <article class="product">
+                <a href="https://imgbb.com/">
+                    <img src="https://i.ibb.co/jvKXkQc/download.webp" alt="Casual Shirt">
+                </a>
+                <h2>Casual Shirt</h2>
+                <p>$29.99</p>
+                <button>Add to Cart</button>
+            </article>
+            <article class="product">
+                <a href="https://imgbb.com/">
+                    <img src="https://i.ibb.co/F0cJwRM/download.jpg" alt="Casual Shirt">
+                </a>
+                <h2>Casual Shirt</h2>
+                <p>$29.99</p>
+                <button>Add to Cart</button>
+            </article>
+            <article class="product">
+                <a href="https://ibb.co/jHgMSPz">
+                    <img src="https://i.ibb.co/4JPTHn2/Top-23-Product-Photography-Ideas.jpg" alt="Trendy Shoes">
+                </a>
+                <h2>Trendy Shoes</h2>
+                <p>$89.99</p>
+                <button>Add to Cart</button>
+            </article>
+            <article class="product">
+                <a href="https://ibb.co/QPMTPpL">
+                    <img src="https://i.ibb.co/StBMt5b/custom-nike-dunk-high-by-you-shoes.jpg" alt="Trendy Shoes">
+                </a>
+                <h2>Trendy Shoes</h2>
+                <p>$89.99</p>
+                <button>Add to Cart</button>
+            </article>
+        </section>
+
+        <section class="cart">
+            <h2>Shopping Cart</h2>
+            <ul>
+                <!-- Cart items will be displayed here -->
+            </ul>
+            <p>Total: $0.00</p>
+            <button>Checkout</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li><a href="#">Coupons</a></li>
+                            <li><a href="#">Blog Post</a></li>
+                            <li><a href="#">Return Policy</a></li>
+                            <li><a href="#">Join Affiliate</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col footer-col-4">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li><a href="https://www.instagram.com/nithin__2005/profilecard/?igsh=dDBmdmFwaWtvamlk">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Whatapp</a></li>
+                            <li><a href="#">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr />
+                <p class="copyright">Copyright &copy; 2024 Fashion Store. All rights reserved.</p>
+                <p>Contact: <a href="mailto:rayapureddynithin@gmail.com">rayapureddynithin@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" onclick="openModal('signupModal')">Register</a></p>
+        </div>
+    </div>
+
+    <!-- Modal for Sign Up -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signupModal')">&times;</span>
+            <h2>Sign Up</h2>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+        
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+        
+        // Close the modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                closeModal('loginModal');
+                closeModal('signupModal');
+            }
+        }
+    </script>
+</body>
+</html>
